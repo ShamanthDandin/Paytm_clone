@@ -1,7 +1,9 @@
 // backend/db.js
 const mongoose = require('mongoose');
+require('dotenv').config();
+const mongoURI = process.env.link;
+mongoose.connect(mongoURI);
 
-mongoose.connect(link);
 
 // Create a Schema for Users
 const userSchema = new mongoose.Schema({
